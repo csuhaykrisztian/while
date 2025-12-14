@@ -1,12 +1,16 @@
 import random
 
-print("Ez a program 20 véletlenszámot generál 1 és 12 között, majd kiírja csak a 3-mal osztható számokat.")
+print("Ez a program 20 véletlenszámot generál 1 és 12 között.")
+print("Csak a 3-mal osztható számokat írja ki.")
 
-szamok = [random.randint(1, 12) for _ in range(20)]
-harommal_oszthato = [sz for sz in szamok if sz % 3 == 0]
+darab = 0
+szamlalo = 0
 
-print("A 3-mal osztható számok:")
-for sz in harommal_oszthato:
-    print(sz)
+while szamlalo < 20:
+    szam = random.randint(1, 12)
+    if szam % 3 == 0:
+        print(szam)
+        darab += 1
+    szamlalo += 1
 
-print(f"Összesen {len(harommal_oszthato)} darab 3-mal osztható számot találtunk.")
+print("Összesen", darab, "darab 3-mal osztható szám volt.")
