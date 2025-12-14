@@ -1,7 +1,11 @@
-print("Ez a program a bekért szöveget a felhasználó által megadott alkalommal írja ki.")
+print("Ez a program a megadott szöveget a kívánt alkalommal írja ki.")
 
-szoveg = input("Kérlek, írd be a szöveget: ")
-alkalom = int(input("Hányszor szeretnéd kiírni a szöveget? "))
+szoveg = input("Add meg a szöveget: ")
+alkalom = int(input("Hányszor szeretnéd kiírni? "))
 
-for i in range(alkalom):
-    print(f"{i+1}. alkalom: {szoveg}")
+szamlalo = 1
+
+while szamlalo <= alkalom:
+    print(szamlalo, ". alkalom:", szoveg)
+    szamlalo += 1
+
